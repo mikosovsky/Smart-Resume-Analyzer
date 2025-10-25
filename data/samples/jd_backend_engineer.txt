@@ -1,0 +1,18 @@
+Backend Software Engineer
+About the role:
+We are seeking a Backend Software Engineer to build scalable APIs and microservices.
+Responsibilities:
+- Design, implement, and maintain REST APIs using FastAPI or Flask.
+- Integrate with PostgreSQL and Redis for data storage and caching.
+- Write clean, tested, and documented Python code.
+- Deploy services using Docker and CI/CD pipelines.
+- Collaborate with frontend and data teams to define service contracts.
+Requirements:
+- 3+ years of backend development in Python.
+- Experience with FastAPI, SQLAlchemy, and PostgreSQL.
+- Familiarity with Redis and Docker.
+- Strong understanding of REST design and API documentation (OpenAPI/Swagger).
+Nice to have:
+- AWS or GCP deployment experience.
+- Familiarity with Celery or background workers.
+- Basic understanding of frontend technologies (React, TypeScript).

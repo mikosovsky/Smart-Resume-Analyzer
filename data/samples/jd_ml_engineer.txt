@@ -1,0 +1,16 @@
+Machine Learning Engineer
+About the role:
+We’re looking for an ML Engineer to build and deploy machine learning models into production.
+Responsibilities:
+- Develop ML models using scikit-learn, PyTorch, or TensorFlow.
+- Implement data pipelines with Airflow or Prefect.
+- Optimize model training and inference for performance.
+- Collaborate with data scientists and backend engineers to integrate models into APIs.
+Requirements:
+- Strong Python skills and understanding of ML fundamentals.
+- Experience with feature engineering, model evaluation, and versioning (MLflow).
+- Familiarity with Docker and cloud platforms (AWS/GCP).
+Nice to have:
+- NLP experience using Hugging Face or spaCy.
+- Knowledge of LangChain or vector databases.
+- Exposure to FastAPI or Flask for model serving.

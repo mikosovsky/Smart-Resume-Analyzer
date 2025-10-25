@@ -1,0 +1,15 @@
+Frontend Software Engineer
+About the role:
+We’re seeking a Frontend Engineer to develop responsive, accessible, and performant web interfaces.
+Responsibilities:
+- Build UI components using React and TypeScript.
+- Implement responsive layouts with Tailwind CSS or Material UI.
+- Integrate REST and GraphQL APIs.
+- Participate in design reviews and frontend architecture discussions.
+Requirements:
+- 2+ years of experience with React and modern JavaScript/TypeScript.
+- Proficiency with HTML5, CSS3, and frontend build tools (Vite, Webpack).
+- Experience with version control (Git) and agile workflows.
+Nice to have:
+- Familiarity with Next.js, Redux Toolkit, and unit testing (Jest).
+- Experience with CI/CD pipelines and backend APIs (FastAPI, Node.js).
