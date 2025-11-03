@@ -1,0 +1,12 @@
+fastapi
+starlette
+uvicorn
+python-dotenv
+authlib
+pytest
+pytest-asyncio
+pre-commit
+ruff
+pydantic-settings
+pydantic
+httpx
