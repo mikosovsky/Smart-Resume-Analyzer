@@ -1,0 +1,1 @@
+# Embedding implementation (replace with real model later)

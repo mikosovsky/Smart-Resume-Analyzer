@@ -1,0 +1,1 @@
+# PDF/DOCX → text; sectioning & chunking
