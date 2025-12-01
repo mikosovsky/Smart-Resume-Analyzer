@@ -10,3 +10,4 @@ ruff
 pydantic-settings
 pydantic
 httpx
+python-multipart
