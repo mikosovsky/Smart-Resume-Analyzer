@@ -11,3 +11,4 @@ pydantic-settings
 pydantic
 httpx
 python-multipart
+pymupdf
