@@ -1,0 +1,8 @@
+John Carter Backend Engineer | john.carter@example.com  Summary: Backend engineer with 4
+years of experience in building REST APIs and data services using Python and FastAPI.
+Experience: Software Engineer, DataFlux Systems (2021–Present) - Developed FastAPI
+microservices for data ingestion and analytics. - Integrated PostgreSQL and Redis for
+caching user sessions. - Containerized apps with Docker and deployed via GitHub Actions to
+AWS ECS.  Backend Developer, NovaTech (2019–2021) - Built Flask APIs, migrated to FastAPI
+for performance. - Designed relational schema and queries in PostgreSQL.  Skills: Python,
+FastAPI, Flask, PostgreSQL, Redis, Docker, AWS, Git, CI/CD
