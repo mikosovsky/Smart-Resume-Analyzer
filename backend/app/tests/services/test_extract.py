@@ -4,9 +4,8 @@ import io
 import pytest
 
 
-@pytest.fixture
-def create_upload_file() -> UploadFile:
-    file_path = "data/samples/resume_backend_engineer.pdf"
+def create_upload_file(pdf_name) -> UploadFile:
+    file_path = f"data/samples/{pdf_name}"
     with open(file_path, "rb") as f:
         file_content = f.read()
     upload_file = UploadFile(
@@ -15,18 +14,26 @@ def create_upload_file() -> UploadFile:
     return upload_file
 
 
-@pytest.fixture
-def txt_resume_content() -> str:
-    file_path = "data/samples/resume_backend_engineer.txt"
+def txt_resume_content(txt_name) -> str:
+    file_path = f"data/samples/{txt_name}"
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
         return content
 
 
+@pytest.mark.parametrize(
+    "pdf_name,txt_name",
+    [
+        ("resume_backend_engineer.pdf", "resume_backend_engineer.txt"),
+        ("resume_frontend_engineer.pdf", "resume_frontend_engineer.txt"),
+        ("resume_ml_engineer.pdf", "resume_ml_engineer.txt"),
+    ],
+)
 @pytest.mark.asyncio
-async def test_pdf_text_extraction(create_upload_file, txt_resume_content):
-    upload_file = create_upload_file
+async def test_pdf_text_extraction(pdf_name, txt_name):
+    upload_file = create_upload_file(pdf_name)
     pdf_extractor = PDFExtractor()
     extracted_text = await pdf_extractor.extract_text(upload_file)
-    txt_resume = txt_resume_content
+    print(extracted_text)
+    txt_resume = txt_resume_content(txt_name)
     assert txt_resume == extracted_text
