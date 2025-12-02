@@ -1,0 +1,8 @@
+Priya Sharma Machine Learning Engineer | priyasharma.ai@example.com  Summary: Machine
+Learning Engineer experienced in NLP and predictive modeling, focusing on robust pipelines
+and production-ready ML APIs.  Experience: ML Engineer, FinAI Labs (2022–Present) - Built
+customer churn prediction models using scikit-learn and PyTorch. - Automated ETL with
+Airflow; tracked experiments using MLflow. - Deployed inference API with FastAPI and
+Docker on AWS Lambda.  Data Scientist, InsightHub (2020–2022) - NLP classification using
+Hugging Face transformers. - Text preprocessing pipelines with spaCy.  Skills: Python,
+scikit-learn, PyTorch, MLflow, Airflow, spaCy, Hugging Face, FastAPI, AWS, Docker

@@ -1,0 +1,8 @@
+Daniel Kim Frontend Developer | daniel.kim@example.com  Summary: Frontend developer
+focused on creating clean, accessible, and high-performing web applications using React
+and TypeScript.  Experience: Frontend Engineer, BrightPath (2022–Present) - Built internal
+dashboards using React, TypeScript, and Tailwind CSS. - Integrated REST APIs and optimized
+rendering with React Query. - Contributed to design system built with Storybook.  Web
+Developer, AppSprint (2020–2022) - Developed multi-page web apps using React and Next.js.
+- Wrote unit tests with Jest and Cypress for CI pipelines.  Skills: React, TypeScript,
+Next.js, Tailwind CSS, Redux Toolkit, Jest, Git, REST, GraphQL
