@@ -1,10 +1,10 @@
-from backend.app.services.extract import PDFExtractor
+from backend.app.services.extract import PDFExtractor, TXTExtractor
 from fastapi import UploadFile
 import io
 import pytest
 
 
-def create_upload_file(pdf_name) -> UploadFile:
+def create_pdf_upload_file(pdf_name) -> UploadFile:
     file_path = f"data/samples/{pdf_name}"
     with open(file_path, "rb") as f:
         file_content = f.read()
@@ -14,11 +14,15 @@ def create_upload_file(pdf_name) -> UploadFile:
     return upload_file
 
 
-def txt_resume_content(txt_name) -> str:
+def create_txt_upload_file(txt_name) -> UploadFile:
     file_path = f"data/samples/{txt_name}"
+    content = ""
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
-        return content
+    upload_file = UploadFile(
+        filename="sample_resume.txt", file=io.BytesIO(content.encode("utf-8"))
+    )
+    return upload_file
 
 
 @pytest.mark.parametrize(
@@ -31,9 +35,11 @@ def txt_resume_content(txt_name) -> str:
 )
 @pytest.mark.asyncio
 async def test_pdf_text_extraction(pdf_name, txt_name):
-    upload_file = create_upload_file(pdf_name)
+    upload_file = create_pdf_upload_file(pdf_name)
     pdf_extractor = PDFExtractor()
     extracted_text = await pdf_extractor.extract_text(upload_file)
     print(extracted_text)
-    txt_resume = txt_resume_content(txt_name)
-    assert txt_resume == extracted_text
+    txt_upload_file = create_txt_upload_file(txt_name)
+    txt_extractor = TXTExtractor()
+    expected_text = await txt_extractor.extract_text(txt_upload_file)
+    assert expected_text == extracted_text
