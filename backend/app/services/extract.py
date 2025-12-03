@@ -31,7 +31,8 @@ class PDFExtractor(DocumentExtractor):
         finally:
             doc.close()
         return text
-    
+
+
 class TXTExtractor(DocumentExtractor):
     def is_type(self, file_name: str) -> bool:
         return file_name.lower().endswith(".txt")
