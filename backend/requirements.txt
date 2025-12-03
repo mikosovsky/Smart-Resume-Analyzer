@@ -12,3 +12,5 @@ pydantic
 httpx
 python-multipart
 pymupdf
+langchain
+langchain-openai
