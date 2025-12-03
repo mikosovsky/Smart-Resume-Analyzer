@@ -31,3 +31,11 @@ class PDFExtractor(DocumentExtractor):
         finally:
             doc.close()
         return text
+    
+class TXTExtractor(DocumentExtractor):
+    def is_type(self, file_name: str) -> bool:
+        return file_name.lower().endswith(".txt")
+
+    async def extract_text(self, upload_file: UploadFile) -> str:
+        content = await upload_file.read()
+        return content.decode("utf-8")
