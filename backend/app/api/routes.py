@@ -1,6 +1,6 @@
 # Upload, create-job, match endpoints
 from fastapi import APIRouter, File, UploadFile
-from app.services.extract import PDFExtractor, TXTExtractor
+from app.services.extract import PDFExtractor
 from app.services.resume_parser import ResumeParser
 
 router = APIRouter()
