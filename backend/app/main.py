@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .api.routes import router
+from backend.app.api.routes import router
 from dotenv import load_dotenv
 
 load_dotenv()
