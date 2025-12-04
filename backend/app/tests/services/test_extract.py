@@ -37,9 +37,14 @@ def create_txt_upload_file(txt_name) -> UploadFile:
 async def test_pdf_text_extraction(pdf_name, txt_name):
     upload_file = create_pdf_upload_file(pdf_name)
     pdf_extractor = PDFExtractor()
-    extracted_text = await pdf_extractor.extract_text(upload_file)
-    print(extracted_text)
+    if pdf_extractor.is_type(upload_file.filename):
+        extracted_text = await pdf_extractor.extract_text(upload_file)
+    else:
+        raise ValueError("File type not supported for PDFExtractor")
     txt_upload_file = create_txt_upload_file(txt_name)
     txt_extractor = TXTExtractor()
-    expected_text = await txt_extractor.extract_text(txt_upload_file)
+    if txt_extractor.is_type(txt_upload_file.filename):
+        expected_text = await txt_extractor.extract_text(txt_upload_file)
+    else:
+        raise ValueError("File type not supported for TXTExtractor")
     assert expected_text == extracted_text

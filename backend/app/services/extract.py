@@ -7,7 +7,7 @@ import fitz  # PyMuPDF
 
 class DocumentExtractor(ABC):
     @abstractmethod
-    def is_type(self, file_name: str) -> bool:
+    def is_type(self, file_name: str | None) -> bool:
         pass
 
     @abstractmethod
@@ -16,8 +16,8 @@ class DocumentExtractor(ABC):
 
 
 class PDFExtractor(DocumentExtractor):
-    def is_type(self, file_name: str) -> bool:
-        return file_name.lower().endswith(".pdf")
+    def is_type(self, file_name: str | None) -> bool:
+        return file_name is not None and file_name.lower().endswith(".pdf")
 
     async def extract_text(self, upload_file: UploadFile) -> str:
         content = await upload_file.read()
@@ -34,8 +34,8 @@ class PDFExtractor(DocumentExtractor):
 
 
 class TXTExtractor(DocumentExtractor):
-    def is_type(self, file_name: str) -> bool:
-        return file_name.lower().endswith(".txt")
+    def is_type(self, file_name: str | None) -> bool:
+        return file_name is not None and file_name.lower().endswith(".txt")
 
     async def extract_text(self, upload_file: UploadFile) -> str:
         content = await upload_file.read()
