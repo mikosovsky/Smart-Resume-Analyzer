@@ -41,6 +41,7 @@ class ResumeSchema(BaseModel):
 class JobDescriptionSchema(BaseModel):
     title: str = Field(..., description="Job title")
     company: str = Field(..., description="Company offering the job")
+    education: str = Field(..., description="Required educational qualifications")
     experience: str = Field(..., description="Required years of experience or level")
     description: str = Field(..., description="Detailed job description")
     required_skills: list[SkillSchema] = Field(
@@ -50,3 +51,28 @@ class JobDescriptionSchema(BaseModel):
         ..., description="List of nice-to-have skills"
     )
     responsibilities: list[str] = Field(..., description="List of job responsibilities")
+
+
+class MatchAreaSchema(BaseModel):
+    score: int = Field(..., description="Match score for the area (0-10)")
+    description: str = Field(..., description="Description your decision for the score")
+
+
+class MatchResponseSchema(BaseModel):
+    resume_name: str = Field(..., description="Name of the candidate from the resume")
+    job_title: str = Field(..., description="Title of the job from the job description")
+    hard_skills_match: MatchAreaSchema = Field(
+        ..., description="Match details for hard skills"
+    )
+    soft_skills_match: MatchAreaSchema = Field(
+        ..., description="Match details for soft skills"
+    )
+    experience_match: MatchAreaSchema = Field(
+        ..., description="Match details for experience"
+    )
+    education_match: MatchAreaSchema = Field(
+        ..., description="Match details for education"
+    )
+    additional_match: MatchAreaSchema = Field(
+        ..., description="Match details for any additional criteria"
+    )
